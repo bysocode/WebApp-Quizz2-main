@@ -1,0 +1,73 @@
+/* Responsive container */
+#app {
+  max-width: 100%; /* Full width for all screens */
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card layout */
+.card {
+  width: 100%; /* Full width by default */
+  max-width: 900px; /* Limit on larger screens */
+  margin: 0 auto; /* Centered on all screens */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Questions list */
+.questions-list {
+  display: flex;
+  flex-direction: column; /* Stack questions vertically */
+  gap: 1rem; /* Space between items */
+}
+
+/* Responsive buttons */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Layout adjustments for smaller screens */
+@media (max-width: 768px) {
+  #app {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .questions-list {
+    gap: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Layout adjustments for very small screens */
+@media (max-width: 480px) {
+  .questions-list {
+    flex-direction: column; /* Ensure vertical layout */
+  }
+
+  button {
+    width: 100%; /* Full width for easier clicks */
+    padding: 12px; /* Larger padding for touch devices */
+  }
+}
